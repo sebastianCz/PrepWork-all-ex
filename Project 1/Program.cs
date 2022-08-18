@@ -1,11 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-string firstName;
- 
-    firstName = "BOB";
-Console.WriteLine(firstName);
-firstName = "Emily";
-Console.WriteLine(firstName);
-var message = "Hello world!";
-Console.WriteLine(message);
-
+string name = "BOB";
+int msgNr = 3;
+var temperature = 34.4;
+Console.WriteLine("Hello," + name + " You have" + msgNr + " messages in your inbox. The temperature is " + temperature + " celsius");
