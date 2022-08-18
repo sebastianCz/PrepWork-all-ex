@@ -1,13 +1,19 @@
-﻿decimal decimalQuotient = 7.0m / 5;
+﻿int value = 1;
 
- 
+value = value + 1;
+Console.WriteLine("First increment: " + value);
 
-Console.WriteLine("Decimal quotient: " + decimalQuotient);
+value += 1;
+Console.WriteLine("Second increment: " + value);
 
-Console.WriteLine("Modulus of 200 / 5 : " + (200 % 5));
-Console.WriteLine("Modulus of 7 / 5 : " + (7 % 5));
+value++;
+Console.WriteLine("Third increment: " + value);
 
-int value1 = 3 + 4 * 5;
-int value2 = (3 + 4) * 5;
-Console.WriteLine(value1);
-Console.WriteLine(value2);
+value = value - 1;
+Console.WriteLine("First decrement: " + value);
+
+value -= 1;
+Console.WriteLine("Second decrement: " + value);
+
+value--;
+Console.WriteLine("Third decrement: " + value);
