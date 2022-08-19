@@ -1,25 +1,39 @@
-﻿ 
- 
+﻿int hero= 10;
+int monster = 10;
+Random attack = new Random();
+int attackValue = 0;
+int winner = 0;
 
-for ( int i = 1; i <= 100; i++)
+do
 {
+    attackValue = attack.Next(1, 10);
+    monster = monster - attackValue;
+    Console.WriteLine("Monster has" + monster + "hp and lost " + attackValue + "this turn");
 
-
-    if (i % 3 == 0 && i % 5 == 0)
+    if (monster <= -1)
     {
-        Console.WriteLine(i + "FizzBuzz");
+         monster = 0;
+        winner = 1;
+        Console.WriteLine("The hero won!");
 
     }
-    else if (i % 3 == 0) { Console.WriteLine(i + "Fizz");
-    }
-    else if (i % 5 == 0) {
-        Console.WriteLine(i + "Buzz");
-    }
-    else
+
+    
+   
+     if(monster > 0)
     {
-        Console.WriteLine(i);
+        attackValue = attack.Next(1, 10);
+        hero = hero - attackValue;
+        Console.WriteLine("Hero has" + hero + "hp and lost " + attackValue + "this turn");
 
     }
-}
 
- 
+    if (hero <= -1)
+    {
+
+        hero = 0;
+        winner = 1;
+        Console.WriteLine("The monser won :(");
+    }
+
+} while (winner == 0);
