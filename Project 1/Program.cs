@@ -1,14 +1,25 @@
-﻿bool flag = true;
-if (flag) Console.WriteLine(flag);
+﻿int employeeLevel = 100;
+string employeeName = "John Smith";
 
-string name = "steve";
+string title = "";
 
-if (name == "bob") 
-    Console.WriteLine("Found Bob");
+switch (employeeLevel) 
+{
+    case 100:
+
+    case 200:
+        title = "Senior Associate";
+        break;
+    case 300:
+        title = "Manager";
+        break;
+    case 400:
+        title = "Senior Manager";
+        break;
+    case 500:
+        title = "Associate";
+        break;
 
 
-else if (name == "steve")
-    Console.WriteLine("Found Steve");
-
-else 
-    Console.WriteLine("Found Chuck");
+}
+Console.WriteLine($"{employeeName}, {title}");
