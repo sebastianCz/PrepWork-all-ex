@@ -1,22 +1,14 @@
-﻿/*string value1 = "a";
-string value2 = "A";
+﻿bool flag = true;
+if (flag) Console.WriteLine(flag);
 
-Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
-*/
+string name = "steve";
 
-Console.WriteLine("a" != "a");
-Console.WriteLine("a" != "A");
-Console.WriteLine(1 != 2);
+if (name == "bob") 
+    Console.WriteLine("Found Bob");
 
-string myValue = "a";
 
-Console.WriteLine(myValue != "a");
+else if (name == "steve")
+    Console.WriteLine("Found Steve");
 
-Console.WriteLine(1 > 2);
-Console.WriteLine(1 < 2);
-Console.WriteLine(1 >= 1);
-Console.WriteLine(1 <= 1);
-
-string pangram = "The quick brown fox jumps over the lazy dog";
-Console.WriteLine(!pangram.Contains("fox"));
-Console.WriteLine(pangram.Contains("cow"));
+else 
+    Console.WriteLine("Found Chuck");
