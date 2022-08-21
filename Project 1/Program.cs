@@ -1,9 +1,22 @@
-﻿string value = "102";
-int result = 0;
-if (int.TryParse(value, out result))
+﻿string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+decimal total = 0m;
+string message = "";
+
+foreach (var value in values)
 {
-    Console.WriteLine($"Measurement: {result}");
+    decimal number;
+    if (decimal.TryParse(value, out number))
+    {
+
+        total += number;
+    }
+    else
+    {
+
+        message += value;
+    }
+   
+ 
 }
-else
-{
-    Console.WriteLine("Unable to report the measurement.");
+Console.WriteLine($"Message: {message}");
+Console.WriteLine($"Total:{total}");
